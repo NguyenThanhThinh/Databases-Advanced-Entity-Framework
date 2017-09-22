@@ -13,7 +13,7 @@ namespace EX1
 
         public StudentSystemContext(): base("name=StudentSystemContext")
         {
-
+            Database.SetInitializer(new SeedData());
         }
         public virtual DbSet<Student> Students { get; set; }
 
